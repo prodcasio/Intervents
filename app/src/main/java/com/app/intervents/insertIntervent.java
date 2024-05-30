@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TimePicker;
 
+import java.io.File;
+
 public class insertIntervent extends AppCompatActivity {
     File file;
     DatePicker data = null;
@@ -21,13 +23,14 @@ public class insertIntervent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_intervent);
-        File file =
+        /*File cartella = getFilesDir();
+        Log.d("MioTag", "Salvo nella cartella " + cartella.getAbsolutePath() );
         data = (DatePicker) findViewById(R.id.data);
         nomeAzienda = (EditText) findViewById(R.id.nomeAzienda);
         oraInizio = (TimePicker) findViewById(R.id.oraInizio);
         oraFine = (TimePicker) findViewById(R.id.oraFine);
         tipoIntervento = (RadioButton) findViewById(R.id.tipoIntervento);
-        attivita = (CheckBox) findViewById(R.id.attivita);
+        attivita = (CheckBox) findViewById(R.id.attivita);*/
     }
     public void inserisciAttivita(){
 
