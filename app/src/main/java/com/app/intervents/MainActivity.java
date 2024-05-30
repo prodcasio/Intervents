@@ -28,13 +28,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void returnToHome(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent); // fatto da Chinaglia
+    }
+
+
     public void insertIntervent(View v){
         Intent intent = new Intent(this, insertIntervent.class);
-        startActivity(intent);
+        startActivity(intent); // fatto da Rodella
     }
 
     public void viewIntervents(View v){
         Intent intent = new Intent(this, VisualizzaInterventi.class);
-        startActivity(intent);
+        startActivity(intent); // fatto da Rodella
     }
 }

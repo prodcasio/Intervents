@@ -19,7 +19,7 @@ public class VisualizzaInterventi extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        test = (TextView) findViewById(R.id.test);
+        // test = (TextView) findViewById(R.id.test);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizza_interventi);
 

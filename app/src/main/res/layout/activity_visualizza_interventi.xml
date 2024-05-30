@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VisualizzaInterventi">
-
-    <!-- GLI ELEMENTI DEVONO AVERE I SEGUENTI ID:
-    Container principale: container
-    Elemento di elenco: el
-    -->
-
-    <TextView
+    >
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text=""
-        android:id="@+id/test"></TextView>
-</android.support.constraint.ConstraintLayout>
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="↩"
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:background="#aa00aa"
+            android:textColor="#ffffff"
+            android:onClick="returnToHome"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Interventi"
+            android:textColor="#000000"
+            android:textSize="40dp"
+            android:textAlignment="textStart"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:id="@+id/listadiv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/back"
+
+            />
+
+    </LinearLayout>
+</ScrollView>
+
+<!-- Codice di Tia -->

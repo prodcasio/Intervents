@@ -55,6 +55,4 @@
         android:fontFamily="sans-serif"
         android:onClick="viewIntervents"
         />
-
-    <!-- update 2 -->
-</LinearLayout>
+</LinearLayout><!-- Codice di Tia -->

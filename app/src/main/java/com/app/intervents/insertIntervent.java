@@ -37,7 +37,7 @@ public class insertIntervent extends AppCompatActivity {
         nomeAzienda = (EditText) findViewById(R.id.nomeAzienda);
         oraInizio = (TimePicker) findViewById(R.id.oraInizio);
         oraFine = (TimePicker) findViewById(R.id.oraFine);
-        tipoIntervento = (RadioGroup) findViewById(R.id.tipoIntervento);
+        tipoIntervento = (RadioGroup) findViewById(R.id.tipointervento);
         //attivita = (CheckBox) findViewById(R.id.attivita);
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
