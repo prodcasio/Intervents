@@ -29,12 +29,6 @@ public class insertIntervent extends AppCompatActivity {
     TimePicker oraInizio = null;
     TimePicker oraFine = null;
     RadioGroup tipoIntervento = null;
-    CheckBox chk1;
-    CheckBox chk2;
-    CheckBox chk3;
-    CheckBox chk4;
-    CheckBox chk5;
-    CheckBox chk6;
     ArrayList<CheckBox> attivita;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
