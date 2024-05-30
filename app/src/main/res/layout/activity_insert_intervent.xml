@@ -1,9 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".insertIntervent">
+    >
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Inserimento dati"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Data intervento:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+    <DatePicker
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Nome azienda:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nomeAzienda"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:hint="Inserire nome azienda..."
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Ora di inizio intervento:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+    <TimePicker
+        android:id="@+id/oraInizio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Ora di fine intervento:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+    <TimePicker
+        android:id="@+id/oraFine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Tipo di intervento:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programmato"
+            android:textSize="15dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non programmato"
+            android:textSize="15dp"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Attività svolte:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/configurazione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configurazione rete"
+        android:textSize="15dp"
+        />
+
+    <CheckBox
+        android:id="@+id/aggiuntadevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aggiunta devide"
+        android:textSize="15dp"
+        />
+
+    <CheckBox
+        android:id="@+id/rimozionedevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rimozione device"
+        android:textSize="15dp"
+        />
+
+    <CheckBox
+        android:id="@+id/problemasw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soluzione problema software"
+        android:textSize="15dp"
+        />
+
+    <CheckBox
+        android:id="@+id/problemahw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soluzione problema hardware"
+        android:textSize="15dp"
+        />
+
+    <CheckBox
+        android:id="@+id/altro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altro"
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/altrospecificato"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Specifica altro..."
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/invia"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        android:text="Invia"
+        android:layout_gravity="center"
+        android:background="#aa00aa"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif"
+        android:onClick="viewIntervents"
+        />
+    <!-- update 2 -->
+</LinearLayout>
+</ScrollView>
