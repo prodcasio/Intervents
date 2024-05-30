@@ -53,8 +53,8 @@
         android:textSize="15dp"
         android:textAllCaps="false"
         android:fontFamily="sans-serif"
-        android:onClick="viewIntervent"
+        android:onClick="viewIntervents"
         />
 
-    <!-- updatee -->
+    <!-- update -->
 </LinearLayout>
