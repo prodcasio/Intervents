@@ -113,7 +113,8 @@
 
     <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/tipoIntervento">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -212,7 +213,7 @@
         android:textSize="15dp"
         android:textAllCaps="false"
         android:fontFamily="sans-serif"
-        android:onClick="viewIntervents"
+        android:onClick="inserisciIntervento"
         />
     <!-- update 3 -->
 </LinearLayout>
