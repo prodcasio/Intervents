@@ -37,7 +37,7 @@ public class VisualizzaInterventi extends AppCompatActivity {
             String stringa = "";
             while(scanner.hasNext()){
                 stringa += scanner.nextLine().replace(",", " ");
-                stringa += "\n\n";
+                stringa += "\r\n\r\n";
             }
             tv.setText(stringa);
         } catch (IOException e) {
