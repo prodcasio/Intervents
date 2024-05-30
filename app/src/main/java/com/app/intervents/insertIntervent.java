@@ -30,6 +30,7 @@ public class insertIntervent extends AppCompatActivity {
     TimePicker oraFine = null;
     RadioGroup tipoIntervento = null;
     ArrayList<CheckBox> attivita;
+    EditText other = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ public class insertIntervent extends AppCompatActivity {
         attivita.add((CheckBox)findViewById(R.id.chk4));
         attivita.add((CheckBox)findViewById(R.id.chk5));
         attivita.add((CheckBox)findViewById(R.id.chk6));
+        other = (EditText) findViewById(R.id.altrospecificato);
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void inserisciIntervento(View v){
@@ -64,10 +66,11 @@ public class insertIntervent extends AppCompatActivity {
                     strAttivita+=x.getText() + " ";
                 }
             }
-            file.write(strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita);
+            String strOther = other.getText().toString();
+            file.write(strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita + "," + strOther);
             file.close();
             Toast.makeText(this,"Intervento inserito", Toast.LENGTH_SHORT).show();
-            Log.d("tag", strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita);
+            Log.d("tag", strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita + "," + strOther);
 
         } catch (IOException e) {
             Toast.makeText(this,"Errore", Toast.LENGTH_LONG).show();
