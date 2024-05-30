@@ -10,4 +10,10 @@
     Container principale: container
     Elemento di elenco: el
     -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:id="@+id/test"></TextView>
 </android.support.constraint.ConstraintLayout>
