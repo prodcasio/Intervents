@@ -154,7 +154,7 @@
         android:textStyle="bold" />
 
     <CheckBox
-        android:id="@+id/configurazione"
+        android:id="@+id/chck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Configurazione rete"
