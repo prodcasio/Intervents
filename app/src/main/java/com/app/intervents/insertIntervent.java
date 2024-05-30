@@ -32,7 +32,7 @@ public class insertIntervent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_intervent);
-        File cartella = getFilesDir();
+        cartella = getFilesDir();
         data = (DatePicker) findViewById(R.id.data);
         nomeAzienda = (EditText) findViewById(R.id.nomeAzienda);
         oraInizio = (TimePicker) findViewById(R.id.oraInizio);
@@ -53,7 +53,7 @@ public class insertIntervent extends AppCompatActivity {
             file.write(strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio);
             file.close();
             Toast.makeText(this,"Intervento inserito", Toast.LENGTH_SHORT).show();
-            Log.d("tag", strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio)
+            Log.d("tag", strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio);
 
         } catch (IOException e) {
             Toast.makeText(this,"Errore", Toast.LENGTH_LONG).show();
