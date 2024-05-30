@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".VisualizzaInterventi">
 
+    <!-- GLI ELEMENTI DEVONO AVERE I SEGUENTI ID:
+    Container principale: container
+    Elemento di elenco: el
+    -->
 </android.support.constraint.ConstraintLayout>
