@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TimePicker;
@@ -18,6 +19,8 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class insertIntervent extends AppCompatActivity {
     File cartella;
@@ -26,7 +29,7 @@ public class insertIntervent extends AppCompatActivity {
     TimePicker oraInizio = null;
     TimePicker oraFine = null;
     RadioGroup tipoIntervento = null;
-    CheckBox attivita = null;
+    ArrayList<CheckBox> attivita;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,11 @@ public class insertIntervent extends AppCompatActivity {
         oraInizio = (TimePicker) findViewById(R.id.oraInizio);
         oraFine = (TimePicker) findViewById(R.id.oraFine);
         tipoIntervento = (RadioGroup) findViewById(R.id.tipointervento);
-        //attivita = (CheckBox) findViewById(R.id.attivita);
+        attivita = new ArrayList<>();
+        for(int i=0; i<6; i++){
+            CheckBox c = findViewById(R.id.chck+i);
+            attivita.add(c);
+        }
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void inserisciIntervento(View v){
@@ -50,10 +57,16 @@ public class insertIntervent extends AppCompatActivity {
             String strOraFine = oraFine.getHour() + ":" + oraFine.getMinute();
             RadioButton r = (RadioButton) findViewById(tipoIntervento.getCheckedRadioButtonId());
             String strRadio = String.valueOf(r.getText());
-            file.write(strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio);
+            String strAttivita = "";
+            for(CheckBox x : attivita){
+                if(x.isChecked()){
+                    strAttivita+=x.getText() + " ";
+                }
+            }
+            file.write(strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita);
             file.close();
             Toast.makeText(this,"Intervento inserito", Toast.LENGTH_SHORT).show();
-            Log.d("tag", strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio);
+            Log.d("tag", strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita);
 
         } catch (IOException e) {
             Toast.makeText(this,"Errore", Toast.LENGTH_LONG).show();
