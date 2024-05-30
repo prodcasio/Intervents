@@ -22,9 +22,9 @@ public class VisualizzaInterventi extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        tv = (TextView) findViewById(R.id.container);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizza_interventi);
+        tv = (TextView) findViewById(R.id.container);
 
         File cartella = getFilesDir();
         try {
