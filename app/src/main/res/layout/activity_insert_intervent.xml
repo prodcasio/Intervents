@@ -154,7 +154,7 @@
         android:textStyle="bold" />
 
     <CheckBox
-        android:id="@+id/chck"
+        android:id="@+id/chk1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Configurazione rete"
@@ -162,7 +162,7 @@
         />
 
     <CheckBox
-        android:id="@+id/aggiuntadevice"
+        android:id="@+id/chk2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aggiunta devide"
@@ -170,7 +170,7 @@
         />
 
     <CheckBox
-        android:id="@+id/rimozionedevice"
+        android:id="@+id/chk3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rimozione device"
@@ -178,7 +178,7 @@
         />
 
     <CheckBox
-        android:id="@+id/problemasw"
+        android:id="@+id/chk4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Soluzione problema software"
@@ -186,7 +186,7 @@
         />
 
     <CheckBox
-        android:id="@+id/problemahw"
+        android:id="@+id/chk5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Soluzione problema hardware"
@@ -194,7 +194,7 @@
         />
 
     <CheckBox
-        android:id="@+id/altro"
+        android:id="@+id/chk6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Altro"

@@ -29,8 +29,13 @@ public class insertIntervent extends AppCompatActivity {
     TimePicker oraInizio = null;
     TimePicker oraFine = null;
     RadioGroup tipoIntervento = null;
+    CheckBox chk1;
+    CheckBox chk2;
+    CheckBox chk3;
+    CheckBox chk4;
+    CheckBox chk5;
+    CheckBox chk6;
     ArrayList<CheckBox> attivita;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,10 +47,12 @@ public class insertIntervent extends AppCompatActivity {
         oraFine = (TimePicker) findViewById(R.id.oraFine);
         tipoIntervento = (RadioGroup) findViewById(R.id.tipointervento);
         attivita = new ArrayList<>();
-        for(int i=0; i<6; i++){
-            CheckBox c = findViewById(R.id.chck+i);
-            attivita.add(c);
-        }
+        attivita.add((CheckBox)findViewById(R.id.chk1));
+        attivita.add((CheckBox)findViewById(R.id.chk2));
+        attivita.add((CheckBox)findViewById(R.id.chk3));
+        attivita.add((CheckBox)findViewById(R.id.chk4));
+        attivita.add((CheckBox)findViewById(R.id.chk5));
+        attivita.add((CheckBox)findViewById(R.id.chk6));
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void inserisciIntervento(View v){
