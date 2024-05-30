@@ -18,12 +18,11 @@ import java.util.Scanner;
 public class VisualizzaInterventi extends AppCompatActivity {
 
     TextView test;
-    LinearLayout ll;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // test = (TextView) findViewById(R.id.test);
-        ll = (LinearLayout) findViewById(R.id.lista);
+        tv = (TextView) findViewById(R.id.container);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizza_interventi);
 
@@ -35,10 +34,12 @@ public class VisualizzaInterventi extends AppCompatActivity {
             */
             File file = new File(cartella.getAbsolutePath() + "/interventi.csv");
             Scanner scanner = new Scanner(file);
+            String stringa = "";
             while(scanner.hasNext()){
-                View view = new View(this);
-                ll.addView(view);
+                stringa += scanner.nextLine().replace(",", " ");
+                stringa += "\n\n";
             }
+            tv.setText(stringa);
         } catch (IOException e) {
             e.printStackTrace();
         }
