@@ -18,11 +18,12 @@ import java.util.Scanner;
 public class VisualizzaInterventi extends AppCompatActivity {
 
     TextView test;
-    LinearLayout ll = (LinearLayout) findViewById(R.id.lista);
+    LinearLayout ll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // test = (TextView) findViewById(R.id.test);
+        ll = (LinearLayout) findViewById(R.id.lista);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizza_interventi);
 
