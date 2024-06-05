@@ -23,11 +23,27 @@
             android:textStyle="bold"
             />
 
+        <DatePicker
+            android:id="@+id/dataIntervento"
+            android:layout_width="wrap_content"
+            android:layout_height="119dp"
+            android:layout_gravity="center"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
 
-            <TextView
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="513dp"
+            android:contentDescription="@string/app_name">
+            <LinearLayout
                 android:id="@+id/container"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
+            </LinearLayout>
+        </ScrollView>
+
     </LinearLayout>
 </ScrollView>
 

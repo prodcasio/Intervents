@@ -63,11 +63,11 @@ public class insertIntervent extends AppCompatActivity {
             String strAttivita = "";
             for(CheckBox x : attivita){
                 if(x.isChecked()){
-                    strAttivita+=x.getText() + " ";
+                    strAttivita+= "-" + x.getText();
                 }
             }
             String strOther = other.getText().toString();
-            file.write(strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita + "," + strOther);
+            file.write(strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita + "," + strOther + "\n");
             file.close();
             Toast.makeText(this,"Intervento inserito", Toast.LENGTH_SHORT).show();
             Log.d("tag", strData + "," + strAzienda + "," + strOraInizio + "," + strOraFine + "," + strRadio + "," + strAttivita + "," + strOther);

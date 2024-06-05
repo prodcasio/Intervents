@@ -59,6 +59,8 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:hint="Inserire nome azienda..."
+        android:singleLine="true"
+        android:maxLength="25"
         />
 
     <TextView
@@ -195,6 +197,8 @@
         android:layout_height="wrap_content"
         android:hint="Specifica altro..."
         android:textSize="15dp"
+        android:singleLine="true"
+        android:maxLength="30"
         />
 
     <Button
